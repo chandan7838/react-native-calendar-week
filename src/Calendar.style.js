@@ -8,7 +8,7 @@ export default StyleSheet.create({
   //CALENDAR STYLES
   calendarContainer: {
     overflow: "hidden",
-    height: 180,
+    height: 130,
   },
   datesStrip: {
     flexDirection: "row",
