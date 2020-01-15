@@ -75,12 +75,12 @@ class WeekSelector extends Component {
     let component;
     if (React.isValidElement(iconComponent)) {
       component = React.cloneElement(iconComponent, {
-        style: [iconComponent.props.style, { opacity: opacity.opacity }]
+        style: [iconComponent.props.style]
       });
     } else if (Array.isArray(iconComponent)) {
       component = iconComponent;
     } else {
-      let imageSize = { width: size, height: size };
+      let imageSize = { width: 14, height: 14 };
       component = (
         <Image
           style={[
