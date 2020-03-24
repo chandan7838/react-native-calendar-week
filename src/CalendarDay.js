@@ -255,7 +255,7 @@ class CalendarDay extends Component {
                 ]}
                 allowFontScaling={this.props.allowDayTextScaling}
               >
-                {this.props.date.date()}
+                {this.props.date.date().toString().length > 1?this.props.date.date():"0"+this.props.date.date()}
               </Text>
               {this.state.selected?<View style={this.props.selectedBorderStyle}/>:null}
               {/* { this.renderDots() } */}
