@@ -5,6 +5,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import {polyfill} from 'react-lifecycles-compat';
+import moment from 'moment';
 
 import { Text, View, LayoutAnimation, TouchableOpacity } from "react-native";
 import styles from "./Calendar.style.js";
@@ -250,8 +251,11 @@ class CalendarDay extends Component {
             <View>
               <Text
                 style={[
-                    { fontSize: this.state.dateNumberFontSize },
-                    dateNumberStyle
+                    dateNumberStyle,
+                    {
+                      fontSize: this.state.dateNumberFontSize,
+                      color: moment(this.props.date).isBefore(moment()) ? '#1E2020' : '#000'
+                    },
                 ]}
                 allowFontScaling={this.props.allowDayTextScaling}
               >
